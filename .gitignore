@@ -1,0 +1,11 @@
+# Dependencias y builds
+node_modules
+dist
+
+# Variables de entorno (¡nunca subir a GitHub!)
+.env
+.env.local
+
+# Sistema
+.DS_Store
+.vercel
