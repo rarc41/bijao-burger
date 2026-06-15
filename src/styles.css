@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Sora:wght@400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  background: #221b14;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.bb-display {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+}
+.bb-body {
+  font-family: "Sora", system-ui, sans-serif;
+}
+
+@keyframes bb-pop {
+  0% {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.bb-pop {
+  animation: bb-pop 0.25s ease-out;
+}
+
+@keyframes bb-grow {
+  from {
+    width: 0;
+  }
+}
+.bb-grow {
+  animation: bb-grow 0.8s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bb-pop,
+  .bb-grow {
+    animation: none;
+  }
+}
+
+/* ---- utilidades de layout (equivalentes a las de Tailwind) ---- */
+
+.flex {
+  display: flex;
+}
+.inline-flex {
+  display: inline-flex;
+}
+.grid {
+  display: grid;
+}
+.block {
+  display: block;
+}
+.flex-col {
+  flex-direction: column;
+}
+.flex-1 {
+  flex: 1 1 0%;
+}
+.shrink-0 {
+  flex-shrink: 0;
+}
+.items-center {
+  align-items: center;
+}
+.items-stretch {
+  align-items: stretch;
+}
+.items-end {
+  align-items: flex-end;
+}
+.items-baseline {
+  align-items: baseline;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gap-0\.5 {
+  gap: 2px;
+}
+.gap-2 {
+  gap: 8px;
+}
+.gap-3 {
+  gap: 12px;
+}
+.gap-4 {
+  gap: 16px;
+}
+
+.p-4 {
+  padding: 16px;
+}
+.p-6 {
+  padding: 24px;
+}
+.px-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.px-4 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.px-5 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.py-1\.5 {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.py-2 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.py-3 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.py-5 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.pt-6 {
+  padding-top: 24px;
+}
+.pb-5 {
+  padding-bottom: 20px;
+}
+.pb-24 {
+  padding-bottom: 96px;
+}
+
+.mt-1 {
+  margin-top: 4px;
+}
+.mt-2 {
+  margin-top: 8px;
+}
+.mt-3 {
+  margin-top: 12px;
+}
+.mt-4 {
+  margin-top: 16px;
+}
+.mt-5 {
+  margin-top: 20px;
+}
+
+.w-full {
+  width: 100%;
+}
+.max-w-md {
+  max-width: 448px;
+}
+.min-w-0 {
+  min-width: 0;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+.h-full {
+  height: 100%;
+}
+
+.fixed {
+  position: fixed;
+}
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.bottom-0 {
+  bottom: 0;
+}
+.bottom-20 {
+  bottom: 80px;
+}
+.left-1\/2 {
+  left: 50%;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+.rounded-xl {
+  border-radius: 12px;
+}
+.rounded-2xl {
+  border-radius: 16px;
+}
+.rounded-t-3xl {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
